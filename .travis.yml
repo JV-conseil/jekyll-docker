@@ -10,7 +10,7 @@ cache:
   - vendor/bundle
 branches:
   only:
-  - master
+  - main
 env:
   global:
   - DOCKER_EMAIL=contact@jv-conseil.net

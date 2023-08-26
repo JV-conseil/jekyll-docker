@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 360
-    name: 'Build'
+    name: 'Deploy'
     strategy:
       fail-fast: false
       matrix:
@@ -58,7 +58,7 @@ jobs:
             --password-stdin
       - run: |
           bundle exec docker-template build "$DOCKER_REPO" --no-push --force --squash
-          bundle exec docker-template push "$DOCKER_REPO"
+          bundle exec docker-template push $DOCKER_REPO
         env:
           RUBYOPT: "-W0"
           DOCKER_REPO: "${{join(matrix.env, ' ')}}"
