@@ -21,18 +21,18 @@ jobs:
           #   - jekyll:4.0
           #   - jekyll:4
           -
-            - jekyll-builder:4.3.2
-            - jekyll-builder:stable
-            - jekyll-builder:latest
-            - jekyll-builder:4.0
-            - jekyll-builder:4
+            - jekyll-docker:4.3.2
+            - jekyll-docker:stable
+            - jekyll-docker:latest
+            - jekyll-docker:4.0
+            - jekyll-docker:4
           # -
           #   - minimal:4.3.2
           #   - minimal:stable
           #   - minimal:latest
           #   - minimal:4.0
           #   - minimal:4
-          # - jekyll-builder:pages
+          # - jekyll-docker:pages
           # - minimal:pages
           # - jekyll:pages
     steps:

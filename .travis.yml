@@ -39,17 +39,17 @@ jobs:
     #   '\
     # "
   # --
-  # jvconseil/jekyll-builder
+  # jvconseil/jekyll-docker
   # --
   - env: "\
       DOCKER_REPO='\
-        jekyll-builder:4.3.2 \
-        jekyll-builder:stable \
-        jekyll-builder:latest \
-        jvconseil:jekyll-builder \
-        jekyll-builder:pages \
-        jekyll-builder:4.0 \
-        jekyll-builder:4 \
+        jekyll-docker:4.3.2 \
+        jekyll-docker:stable \
+        jekyll-docker:latest \
+        jvconseil:jekyll-docker \
+        jekyll-docker:pages \
+        jekyll-docker:4.0 \
+        jekyll-docker:4 \
       '\
     "
   # --
