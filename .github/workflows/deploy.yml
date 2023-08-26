@@ -1,4 +1,4 @@
-name: 'Deploy'
+name: "Deploy"
 on:
   push:
     branches:
@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 360
-    name: 'Deploy'
+    name: "Deploy"
     strategy:
       fail-fast: false
       matrix:
@@ -20,8 +20,7 @@ jobs:
           #   - jekyll:latest
           #   - jekyll:4.0
           #   - jekyll:4
-          -
-            - jekyll-docker:4.3.2
+          - - jekyll-docker:4.3.2
             - jekyll-docker:stable
             - jekyll-docker:latest
             - jekyll-docker:4.0
@@ -38,7 +37,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: 'Setup Ruby'
+      - name: "Setup Ruby"
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.7.0
@@ -49,7 +48,7 @@ jobs:
           echo $'{\n    "experimental": true\n}' | \
             sudo tee /etc/docker/daemon.json
           sudo systemctl restart docker
-        name: 'docker experimental'
+        name: "Docker Experimental"
 
       # - name: 'docker login'
       #   run: |

@@ -4,10 +4,8 @@
 <img src="http://jekyllrb.com/img/logo-2x.png" align="right" alt="Jekyll" height="100">
 </a>
 
-# Jekyll Docker
-
 <!-- omit in toc -->
-# GitHubbing on UCloud with Ubuntu Terminal
+# Jekyll Docker
 
 ![visitors](https://visitor-badge.laobi.icu/badge?page_id=JV-conseil.ucloud)
 [![License EUPL 1.2](https://img.shields.io/badge/License-EUPL--1.2-blue.svg)](LICENSE)
@@ -156,13 +154,13 @@ docker run --rm \
 
 You can configure some pieces of Jekyll using environment variables, what you cannot with environment variables you can configure using the Jekyll CLI.  Even with a wrapper, we pass all arguments onto Jekyll when we finally call it.
 
-| ENV Var | Default |
-|---|---|
-| `JEKYLL_UID` | `1000` |
-| `JEKYLL_GID` | `1000` |
-| `JEKYLL_DEBUG`, | `""` |
-| `VERBOSE` | `""` |
-| `FORCE_POLLING` | `""` |
+| ENV Var         | Default |
+| --------------- | ------- |
+| `JEKYLL_UID`    | `1000`  |
+| `JEKYLL_GID`    | `1000`  |
+| `JEKYLL_DEBUG`, | `""`    |
+| `VERBOSE`       | `""`    |
+| `FORCE_POLLING` | `""`    |
 
 If you would like to know the CLI options for Jekyll, you can visit [Jekyll's Help Site][2]
 
