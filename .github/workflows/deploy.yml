@@ -15,26 +15,26 @@ jobs:
       matrix:
         env:
           -
-            - jekyll:4.3.2
-            - jekyll:stable
-            - jekyll:latest
-            - jekyll:4.0
-            - jekyll:4
+            - jekyll/jekyll:4.3.2
+            - jekyll/jekyll:stable
+            - jekyll/jekyll:latest
+            - jekyll/jekyll:4.0
+            - jekyll/jekyll:4
           -
-            - builder:4.3.2
-            - builder:stable
-            - builder:latest
-            - builder:4.0
-            - builder:4
+            - jekyll/builder:4.3.2
+            - jekyll/builder:stable
+            - jekyll/builder:latest
+            - jekyll/builder:4.0
+            - jekyll/builder:4
           -
-            - minimal:4.3.2
-            - minimal:stable
-            - minimal:latest
-            - minimal:4.0
-            - minimal:4
-          - builder:pages
-          - minimal:pages
-          - jekyll:pages
+            - jekyll/minimal:4.3.2
+            - jekyll/minimal:stable
+            - jekyll/minimal:latest
+            - jekyll/minimal:4.0
+            - jekyll/minimal:4
+          - jekyll/builder:pages
+          - jekyll/minimal:pages
+          - jekyll/jekyll:pages
     steps:
       - uses: actions/checkout@v3
 
