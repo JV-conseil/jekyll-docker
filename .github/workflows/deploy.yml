@@ -15,19 +15,19 @@ jobs:
       matrix:
         env:
           -
-            - jekyll:4.3.2
+            - jekyll:4.2.2
             - jekyll:stable
             - jekyll:latest
             - jekyll:4.0
             - jekyll:4
           -
-            - builder:4.3.2
+            - builder:4.2.2
             - builder:stable
             - builder:latest
             - builder:4.0
             - builder:4
           -
-            - minimal:4.3.2
+            - minimal:4.2.2
             - minimal:stable
             - minimal:latest
             - minimal:4.0
@@ -37,10 +37,9 @@ jobs:
           - jekyll:pages
     steps:
       - uses: actions/checkout@v3
-      - uses: ruby/setup-ruby@v1
+      - uses: actions/setup-ruby@v1
         with:
-          ruby-version: ${{ matrix.ruby }}
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+          ruby-version: '2.x'
       - run: bundle install
       - run: |
           echo $'{\n    "experimental": true\n}' | \
