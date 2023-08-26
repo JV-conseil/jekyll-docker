@@ -1,40 +1,40 @@
-name: 'Push'
+name: 'Deploy'
 on:
   push:
     branches:
       - ruby3.1.4-alpine3.18
-  schedule:
-    - cron: 2 4 10 * *
+  # schedule:
+  #   - cron: 2 4 10 * *
 jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 360
-    name: 'Build'
+    name: 'Deploy'
     strategy:
       fail-fast: false
       matrix:
         env:
+          # -
+          #   - jekyll:4.3.2
+          #   - jekyll:stable
+          #   - jekyll:latest
+          #   - jekyll:4.0
+          #   - jekyll:4
           -
-            - jekyll:4.3.2
-            - jekyll:stable
-            - jekyll:latest
-            - jekyll:4.0
-            - jekyll:4
-          -
-            - builder:4.3.2
-            - builder:stable
-            - builder:latest
-            - builder:4.0
-            - builder:4
-          -
-            - minimal:4.3.2
-            - minimal:stable
-            - minimal:latest
-            - minimal:4.0
-            - minimal:4
-          - builder:pages
-          - minimal:pages
-          - jekyll:pages
+            - jekyll-builder:4.3.2
+            - jekyll-builder:stable
+            - jekyll-builder:latest
+            - jekyll-builder:4.0
+            - jekyll-builder:4
+          # -
+          #   - minimal:4.3.2
+          #   - minimal:stable
+          #   - minimal:latest
+          #   - minimal:4.0
+          #   - minimal:4
+          # - jekyll-builder:pages
+          # - minimal:pages
+          # - jekyll:pages
     steps:
       - uses: actions/checkout@v3
 

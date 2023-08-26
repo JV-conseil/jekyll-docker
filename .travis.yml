@@ -28,41 +28,41 @@ jobs:
     # --
     # jekyll/jekyll
     # --
-    env: "\
-      DOCKER_REPO='\
-        jekyll:4.3.2 \
-        jekyll:stable \
-        jekyll:latest \
-        jekyll:pages \
-        jekyll:4.0 \
-        jekyll:4 \
-      '\
-    "
+    # env: "\
+    #   DOCKER_REPO='\
+    #     jekyll:4.3.2 \
+    #     jekyll:stable \
+    #     jekyll:latest \
+    #     jekyll:pages \
+    #     jekyll:4.0 \
+    #     jekyll:4 \
+    #   '\
+    # "
   # --
-  # jekyll/builder
+  # jvconseil/jekyll-builder
   # --
   - env: "\
       DOCKER_REPO='\
-        builder:4.3.2 \
-        builder:stable \
-        builder:latest \
-        jekyll:builder \
-        builder:pages \
-        builder:4.0 \
-        builder:4 \
+        jekyll-builder:4.3.2 \
+        jekyll-builder:stable \
+        jekyll-builder:latest \
+        jvconseil:jekyll-builder \
+        jekyll-builder:pages \
+        jekyll-builder:4.0 \
+        jekyll-builder:4 \
       '\
     "
   # --
   # jekyll/minimal
   # --
-  - env: "\
-      DOCKER_REPO='\
-        minimal:4.3.2 \
-        minimal:stable \
-        minimal:latest \
-        jekyll:minimal \
-        minimal:pages \
-        minimal:4.0 \
-        minimal:4 \
-      '\
-    "
+  # - env: "\
+  #     DOCKER_REPO='\
+  #       minimal:4.3.2 \
+  #       minimal:stable \
+  #       minimal:latest \
+  #       jekyll:minimal \
+  #       minimal:pages \
+  #       minimal:4.0 \
+  #       minimal:4 \
+  #     '\
+  #   "
