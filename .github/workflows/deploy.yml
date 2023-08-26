@@ -57,9 +57,10 @@ jobs:
             --username ${{ secrets.DOCKER_USERNAME }} \
             --password-stdin
       - run: |
-          echo "bundle exec docker-template build $DOCKER_REPO --no-push --force --squash"
-          bundle exec docker-template build $DOCKER_REPO --no-push --force --squash
-          bundle exec docker-template push $DOCKER_REPO
+          # bundle exec docker-template build $DOCKER_REPO --no-push --force --squash
+          bundle exec docker-template build builder:4.3.2 --no-push --force --squash
+          # bundle exec docker-template push $DOCKER_REPO
+          bundle exec docker-template push builder:4.3.2
         env:
           RUBYOPT: "-W0"
           DOCKER_REPO: "${{join(matrix.env, ' ')}}"
