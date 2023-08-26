@@ -41,7 +41,7 @@ jobs:
       - name: 'Setup Ruby'
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: ${{ matrix.ruby }}
+          ruby-version: 2.7.0
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
       - run: bundle install
@@ -58,7 +58,7 @@ jobs:
             --password-stdin
       - run: |
           bundle exec docker-template build "$DOCKER_REPO" --no-push --force --squash
-          bundle exec docker-template push $DOCKER_REPO
+          bundle exec docker-template push "$DOCKER_REPO"
         env:
           RUBYOPT: "-W0"
           DOCKER_REPO: "${{join(matrix.env, ' ')}}"
