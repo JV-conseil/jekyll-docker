@@ -57,6 +57,7 @@ jobs:
             --username ${{ secrets.DOCKER_USERNAME }} \
             --password-stdin
       - run: |
+          echo "bundle exec docker-template build $DOCKER_REPO --no-push --force --squash"
           bundle exec docker-template build $DOCKER_REPO --no-push --force --squash
           bundle exec docker-template push $DOCKER_REPO
         env:
