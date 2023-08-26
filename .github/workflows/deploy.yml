@@ -2,7 +2,7 @@ name: 'Push'
 on:
   push:
     branches:
-      - $default-branch
+      - ruby3.1.4-alpine3.18
   schedule:
     - cron: 2 4 10 * *
 jobs:
