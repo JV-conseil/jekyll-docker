@@ -143,6 +143,7 @@ export JEKYLL_VERSION=4.3.3
 docker run --rm \
   --volume="$PWD:/srv/jekyll:Z" \
   --volume="$PWD/vendor/bundle:/usr/local/bundle:Z" \
+  --volume="$PWD/vendor/gem:/opt/gem:Z" \
   -it jvconseil/jekyll:$JEKYLL_VERSION \
   jekyll build
 ```

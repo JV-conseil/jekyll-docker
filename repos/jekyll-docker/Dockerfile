@@ -187,6 +187,8 @@ RUN mkdir -p /usr/gem/cache/bundle
 RUN chown -R jekyll:jekyll \
   /usr/gem/cache/bundle
 
+RUN mkdir -p /opt/gem && chown jekyll:jekyll /opt/gem
+
 CMD ["jekyll", "--help"]
 ENTRYPOINT ["/usr/jekyll/bin/entrypoint"]
 WORKDIR /srv/jekyll
