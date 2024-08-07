@@ -44,4 +44,7 @@ if [ "$JEKYLL_ROOTLESS" ]; then
   groupmod -o -g $JEKYLL_GID jekyll
 fi
 
+export GEM_PATH=$(gem env path)
+export GEM_HOME=/opt/gem
+
 exec "$@"
