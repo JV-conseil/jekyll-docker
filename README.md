@@ -108,7 +108,7 @@ For local development, Jekyll can be run in server mode inside the container. It
 docker run --rm \
   --volume="$PWD:/srv/jekyll:Z" \
   --publish [::1]:4000:4000 \
-  jvconseil/jekyll \
+  jvconseil/jekyll-docker \
   jekyll serve
 ```
 
@@ -124,7 +124,7 @@ If you provide a `Gemfile` and would like to update your `Gemfile.lock` you can 
 export JEKYLL_VERSION=4.3.3
 docker run --rm \
   --volume="$PWD:/srv/jekyll:Z" \
-  -it jvconseil/jekyll:$JEKYLL_VERSION \
+  -it jvconseil/jekyll-docker:$JEKYLL_VERSION \
   bundle update
 ```
 
@@ -143,7 +143,7 @@ export JEKYLL_VERSION=4.3.3
 docker run --rm \
   --volume="$PWD:/srv/jekyll:Z" \
   --volume="$PWD/vendor/bundle:/usr/local/bundle:Z" \
-  -it jvconseil/jekyll:$JEKYLL_VERSION \
+  -it jvconseil/jekyll-docker:$JEKYLL_VERSION \
   jekyll build
 ```
 
